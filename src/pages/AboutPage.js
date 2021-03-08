@@ -3,6 +3,7 @@ import MyTimeLine from '../components/Timeline';
 import Skills from '../components/Skills';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import myPhoto from '../assets/myPhoto.jpg'
 
 
 const AboutPage = ()=>{
@@ -15,7 +16,7 @@ const AboutPage = ()=>{
                     <div className="sectionTitle">About me</div>
                     <div className="aboutSection">
                         <div className="leftAbout"> 
-                            <img className="myPic" src= "myPhoto.jpg" alt="Hi, it's my face in case you wondered."></img>
+                            <img className="myPic" src="myPhoto.jpg" alt="Hi, it's my face in case you wondered."></img>
                            
                             <div className="aboutElements mySkills"> 
                                     <h2>My skills</h2>

@@ -1,13 +1,9 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  NavLink
-} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
-document.addEventListener('DOMContentLoaded', () => {
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+function toggleBurger(){
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
   // Check if there are any navbar burgers
   if ($navbarBurgers.length > 0) {
@@ -23,12 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-
       });
     });
   }
-
-});
+}
 
 function Navbar (){
     return(
@@ -36,12 +30,13 @@ function Navbar (){
 <nav className="navbar is-transparent is-fixed-top elem-border">
   <div className="navbar-brand myBrandTitle">
     <a className="navbar-item" >
-    <NavLink to="/" className="navbar-item" >Zuza's portfolio</NavLink>
+    <NavLink to="/" className="navbar-item" >Zuza's Portfolio</NavLink>
     </a>
-    <a role="button" className="navbar-burger" data-target="navbarTransparent" aria-expanded="false">
-        <span ></span>
-        <span ></span>
-        <span ></span>
+    <a role="button" className="navbar-burger" data-target="navbarTransparent" aria-expanded="false"
+    onClick={toggleBurger}> 
+        <span></span>
+        <span></span>
+        <span></span>
     </a>
   </div>
 
